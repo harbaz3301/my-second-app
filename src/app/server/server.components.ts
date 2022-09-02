@@ -6,10 +6,14 @@ import { Component } from "@angular/core";
    templateUrl: './server.component.html',
 })
 export class ServerComponent{
-   serverstatus: string = "online"
+   serverstatus: string = Math.random() > 0.5 ? 'online' : 'ofline';
    serverId: number = 10
 
    getserverstatus(){
       return this.serverstatus;
+   }
+
+   getColor(){
+      return this.serverstatus === 'online' ? 'red' : 'green'
    }
 }

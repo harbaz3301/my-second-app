@@ -1,8 +1,20 @@
 <button class="btn btn-primary"
     [disabled]="!allowserver"
     (click)="onCreateServer()">add server</button>
-    <input type="text" class="form-control" (input)="oninput($event)">
-<p>servers works!</p>
-<p>{{allowserver}}</p>
-<p>{{servercreation}}</p>
-<p >{{servername}}</p>
+
+
+    <button class="btn btn-primary"
+    [disabled]="!removeserver"
+    (click)="myfun()">remove server</button>
+
+
+    <input type="text" class="form-control" [(ngModel)]="servername">
+
+
+<p *ngIf="severd; else noServer"> server is created and name is  {{servername}}</p>
+
+<ng-template #noServer>
+    <p>
+        no server created
+    </p>
+</ng-template>
