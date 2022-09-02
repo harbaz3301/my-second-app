@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
    selector: 'app-server',
-   templateUrl: './server.component.html',
+   templateUrl: './server.component.html'
 })
 export class ServerComponent{
    serverstatus: string = Math.random() > 0.5 ? 'online' : 'ofline';
@@ -14,6 +14,6 @@ export class ServerComponent{
    }
 
    getColor(){
-      return this.serverstatus === 'online' ? 'red' : 'green'
+      return this.serverstatus === 'online' ? 'green' : 'red'
    }
 }
